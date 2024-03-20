@@ -64,3 +64,8 @@ SOURCE PATH/TO/sakila-schema.sql
 SOURCE PATH/TO/sakila-data.sql
 ```
 
+6. **port forward mysql**
+```bash
+kubectl port-forward mysql-pod-name 3306:3306
+```
+
