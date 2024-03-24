@@ -81,4 +81,41 @@ python -m uvicorn apiRest.main:app --reload
 
 3. **This will launch server at http://127.0.0.1:8000**
 4. **Go to http://127.0.0.1:8000/docs for all GET calls for testing**
+=======
+## Create Minikube instance of the nextJS server
+
+1. **set up docker correctly**
+```bash
+docker context use default
+```
+
+2. **from root directory of project**
+```bash
+cd nextjs/frontend
+```
+
+3. **create docker image**
+```bash
+docker build -t frontend .
+```
+
+4. **make docker image accessible to minikube**
+```bash
+minikube image load frontend
+```
+
+5. **create deployment**
+```bash
+kubectl apply -f nextjs-deployment.yaml
+```
+
+6. **create service**
+```bash
+kubectl apply -f nextjs-service.yaml
+```
+
+7. **run the following to be able to access the pod instance**
+```bash
+minikube service nextjs-app-service --url
+```
 
