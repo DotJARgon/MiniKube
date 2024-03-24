@@ -2,21 +2,45 @@ import Image from "next/image";
 import styles from "./page.module.css";
 
 export default function Home() {
+
+  
   return (
     <main className={styles.main}>
       
       
       <div className={styles.grid}>
         <a>
-          Enter your Email
+          Enter your Email:
+          <div>
+            <label>email</label>
+            <input type="text" name="email" />
+          </div>
+        </a>
+        
+        <a>
+          Enter your Name:
+          <div>
+            <label>name</label>
+            <input type="text" name="name" />
+          </div>
         </a>
         <a>
-          Enter your Name
+          Enter your City:
+          <div>
+            <label>city</label>
+            <input type="text" name="canada" />
+          </div>
         </a>
-        <a>
-          Enter your City
-        </a>
+        <div>
+        <button>
+          Submit
+          
+        </button>
       </div>
+      </div>
+      
+
+
 
       {/* <div className={styles.grid}>
         <a
