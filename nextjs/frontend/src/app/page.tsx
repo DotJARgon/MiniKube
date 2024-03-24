@@ -1,98 +1,22 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import React, {  } from 'react'
 
-export default function Home() {
-
+export default function Home(this: any) {
+  //rows currently set to filler data
+  let rows = [0,1,2,3];
+  function setRows(){
+    //initialize rows with an API call
+  }
+  //customer list: ID, name, address, zipcode, phone, city, country, notes
+  //customer: ID, storeID, first, last, email, addressID, active, date
   
-  return (
-    <main className={styles.main}>
-      
-      
-      <div className={styles.grid}>
-        <a>
-          Enter your Email:
-          <div>
-            <label>email</label>
-            <input type="text" name="email" />
-          </div>
-        </a>
-        
-        <a>
-          Enter your Name:
-          <div>
-            <label>name</label>
-            <input type="text" name="name" />
-          </div>
-        </a>
-        <a>
-          Enter your City:
-          <div>
-            <label>city</label>
-            <input type="text" name="canada" />
-          </div>
-        </a>
-        <div>
-        <button>
-          Submit
-          
-        </button>
-      </div>
-      </div>
-      
+  
 
+    return(
+      <table id="simple-board">
+       <tbody>
+         {rows}
+       </tbody>
+      </table>
+    )
 
-
-      {/* <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div> */}
-    </main>
-  );
 }
