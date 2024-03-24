@@ -69,3 +69,16 @@ SOURCE PATH/TO/sakila-data.sql
 kubectl port-forward mysql-pod-name 3306:3306
 ```
 
+## Starting FastAPI Server
+
+1. **Before execution, ensure credentials for your database environment are correct in "Minikube/apiRest/databaseConfig.py"**
+
+2. **Execute from root directory**:
+
+```bash
+python -m uvicorn apiRest.main:app --reload
+```
+
+3. **This will launch server at http://127.0.0.1:8000**
+4. **Go to http://127.0.0.1:8000/docs for all GET calls for testing**
+
