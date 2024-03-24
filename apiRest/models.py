@@ -25,7 +25,6 @@ class CustomerList(Base):
     ID = Column(SmallInteger, primary_key=True)
     name = Column(String)
     address = Column(String)
-    zip_code = Column(String)
     phone = Column(String)
     city = Column(String)
     country = Column(String)

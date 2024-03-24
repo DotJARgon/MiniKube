@@ -20,7 +20,6 @@ class CustomerListBase(BaseModel):
     ID: int
     name: str
     address: str
-    zip_code: str
     phone: str
     city: str
     country: str

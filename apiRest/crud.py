@@ -10,8 +10,8 @@ def get_customer(db: Session, cust_id: int):
 
 
 def get_customer_list_by_country(db: Session, country: str):
-    return db.query(models.CustomerList).filter(models.CustomerList.country == country).all().order_by(
-        models.CustomerList.city.desc())
+    return db.query(models.CustomerList).filter(models.CustomerList.country == country).order_by(
+        models.CustomerList.city.desc()).all()
 
 
 def get_customer_list(db: Session, skip: int = 0, limit: int = 100):
