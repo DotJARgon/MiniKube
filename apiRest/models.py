@@ -2,7 +2,7 @@ import sqlalchemy.types
 from sqlalchemy import Column, Integer, String, ForeignKey, DateTime, SmallInteger
 from sqlalchemy.orm import relationship
 
-from db import Base
+from apiRest.db import Base
 
 
 class Customer(Base):
@@ -22,7 +22,7 @@ class Customer(Base):
 class CustomerList(Base):
     __tablename__ = "customer_list"
 
-    ID = Column(SmallInteger)
+    ID = Column(SmallInteger, primary_key=True)
     name = Column(String)
     address = Column(String)
     zip_code = Column(String)
